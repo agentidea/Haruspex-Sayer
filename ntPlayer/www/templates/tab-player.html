@@ -1,0 +1,72 @@
+<ion-view title="Player">
+  <ion-content class="padding">
+
+
+
+<div class="row responsive-sm">
+
+  <div class="col">
+    <video id="video1"
+           width="100%"
+           height="100%"
+           poster="http://simonhampel.com/wp-content/uploads/2008/01/2003_12_15_mogo_zoo_-_122_2281.jpg"
+    webkit-playsinline>
+
+        <source type="video/mp4"
+                src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" >
+                Your browser does not support HTML5 video.
+    </video>
+  </div>
+
+  <div class="col">
+
+    <div class="button-bar">
+        <a class="button" ng-click="makeLarge()">Large</a>
+        <a class="button button-positive" ng-click="playPause()">Play</a>
+        <a class="button" ng-click="makeSmall()">Small</a>
+    </div>
+
+  </div>
+
+</div>
+
+
+ <hr/>
+
+ <div class="list card">
+
+    <div class="card" ng-repeat="user in users | reverse">
+        <div class="item item-divider">
+        {{user.event}}
+        </div>
+        <div class="item">
+            <a class="item item-avatar" href="#">
+            <img src="{{user.avatar_url}}">
+                <h2>{{user.name}}</h2>
+                <p>{{user.location}}</p>
+            </a>
+
+            <img src="" />
+        </div>
+        <div class="item item-divider">
+        <h6>{{user.timestamp}}</h6>
+        </div>
+
+    </div>
+
+
+
+ </div> <!-- end card list -->
+
+
+
+
+<!--
+http://stackoverflow.com/questions/3699552/html5-inline-video-on-iphone-vs-ipad-browser
+If you are using Phonegap / Cordova, you can enable inline media playing with <preference name="AllowInlineMediaPlayback" value="true" /> in your config.xml file AND adding webkit-playsinline to the <video> tag –  micho Mar 17 at 12:02
+-->
+
+
+
+  </ion-content>
+</ion-view>

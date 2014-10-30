@@ -1,0 +1,13 @@
+<ion-view title="Dashboard">
+  <ion-content class="padding">
+    <div ng-controller="FavoritesCtrl">
+
+
+    <ion-list>
+    <ion-item ng-repeat="friend in friends" type="item-text-wrap" href="#/tab/friend/{{friend.id}}">
+    {{friend.name}}
+    </ion-item>
+    </ion-list>
+</div>
+  </ion-content>
+</ion-view>
